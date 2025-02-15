@@ -10,10 +10,7 @@ from models import db
 
 # Initialize Flask app for database
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
-    'DATABASE_URL', 
-    'postgresql://neondb_owner:npg_YenjIwv52VyD@ep-super-darkness-a5ls1fst-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require'
-)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize database
