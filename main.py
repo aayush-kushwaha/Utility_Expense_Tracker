@@ -20,9 +20,14 @@ with app.app_context():
 # Streamlit Page Configuration
 st.set_page_config(
     page_title="Utility Expense Tracker",
-    page_icon="⚡",
-    layout="wide"
+    page_icon="💰",
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
+
+# Sidebar Navigation
+st.sidebar.title("Navigation")
+
 
 # Initialize session state for data
 with app.app_context():
@@ -273,8 +278,5 @@ else:
     st.info("No records found to modify.")
 
 if __name__ == "__main__":
-    import os
     port = int(os.getenv("PORT", 8501))
-    st.set_page_config(page_title="Utility Expense Tracker")
-    st.write("# Welcome to Utility Expense Tracker 🚀")
-    st.sidebar.title("Navigation")
+    st.write(f"App is running on port {port}")
