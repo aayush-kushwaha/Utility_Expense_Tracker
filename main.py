@@ -12,7 +12,7 @@ from models import db
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
     'DATABASE_URL', 
-    'postgresql://utility_user:password123@localhost:5432/utility_tracker'
+    'postgresql://neondb_owner:npg_YenjIwv52VyD@ep-super-darkness-a5ls1fst-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require'
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
