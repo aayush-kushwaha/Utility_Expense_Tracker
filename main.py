@@ -275,4 +275,6 @@ else:
 if __name__ == "__main__":
     import os
     port = int(os.getenv("PORT", 8501))
-    st.run()
+    st.set_page_config(page_title="Utility Expense Tracker")
+    st.write("# Welcome to Utility Expense Tracker 🚀")
+    st.sidebar.title("Navigation")
