@@ -271,3 +271,8 @@ if not st.session_state.data.empty:
                 st.error("Failed to delete the record.")
 else:
     st.info("No records found to modify.")
+
+if __name__ == "__main__":
+    import os
+    port = int(os.getenv("PORT", 8501))
+    st.run()
